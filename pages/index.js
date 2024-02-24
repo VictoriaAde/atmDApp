@@ -147,7 +147,9 @@ export default function HomePage() {
             Show Owner Address
           </button>
           {showOwnerAddress && (
-            <div className="owner-address">Owner Address: {ownerAddress}</div>
+            <div className="owner-address">
+              Current Owner Address: {ownerAddress}
+            </div>
           )}
         </div>
         <div className="transfer-ownership">
@@ -206,6 +208,19 @@ export default function HomePage() {
             border-radius: 4px;
             outline: none;
           }
+          .owner-btn {
+            margin-top: 1rem;
+            background: #4caf50;
+            border: none;
+            color: #fff;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+          }
+
+          .owner-address {
+            margin-top: 1rem;
+          }
 
           .owner-input:focus {
             border-color: #4caf50;
@@ -217,6 +232,7 @@ export default function HomePage() {
             color: #fff;
             padding: 8px 16px;
             cursor: pointer;
+            font-weight: bold;
           }
 
           .transfer-btn:hover {
@@ -224,34 +240,6 @@ export default function HomePage() {
           }
         `}</style>
       </div>
-
-      // <div>
-      //   <p>Your Account: {account}</p>
-      //   <p>Your Balance: {balance}</p>
-      //   <button onClick={deposit}>Deposit 1 ETH</button>
-      //   <button onClick={withdraw}>Withdraw 1 ETH</button>
-      //   <div>
-      //     <label>New owner address</label>
-      //     <input
-      //       placeholder="Enter new owner address"
-      //       text="text"
-      //       value={newOwner}
-      //       onChange={(e) => setNewOwner(e.target.value)}
-      //     />
-      //   </div>
-      //   <button onClick={transferOwnership}>Transfer Ownership</button>
-
-      //   <style jsx>
-      //     {`
-      //       button {
-      //         background: deepskyblue;
-      //         border: none;
-      //         color: #fff;
-      //         padding: 0.5rem 1rem;
-      //       }
-      //     `}
-      //   </style>
-      // </div>
     );
   };
 
